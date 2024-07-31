@@ -10,7 +10,7 @@ public class Main {
         for (int i=0; i<s.length();i++)
             if (!VAL_VAL.contains(String.valueOf(s.charAt(i))))
                 if(s.charAt(i)==' ')
-                   if(spaceCount+1>2) return false; else spaceCount++;
+                   if(spaceCount+1>2||s.charAt(i+1)==' ') return false; else spaceCount++;
                  else
                      return false;
         return spaceCount==2;
